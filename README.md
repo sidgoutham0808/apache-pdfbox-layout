@@ -32,22 +32,13 @@ Therefore I created a wrapper cell type (named ParagraphCell) which allows to ap
 hyperlinks
 styled text (i.e. colorable text with a font and font size) as well as
 markup (please see this documentation).
-Note that the easytable API may be a bit different to what you find in the linked documentation. Anyway, in order to get your hands dirty look at this code on how to create such a table:
 
 table with markup
 
 Adding Needed Dependency
 This is still a bit experimental and there may be changes in the future. If you want to use this feature nevertheless you need to add pdfbox-layout as a dependency. In case you are using maven for instance in your pom.xml:
 
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-...
 <dependency>
-    <groupId>com.github.ralfstuckert.pdfbox-layout</groupId>
     <artifactId>pdfbox2-layout</artifactId>
     <version>1.0.1</version>
     <exclusions>
@@ -67,20 +58,7 @@ TableDrawer.builder()
     ...
     .build()
     .draw()
-Kudos
-to Binghammer for implementing cell coloring and text center alignment
-to Sebastian Göhring for finding and fixing a bug (column spanning)
-to AndreKoepke for the line breaking feature, some bigger nice refactorings and improvements
-to Wolfgang Apolinarski for the printing over pages and bugfixes
-to AdrianMiska for finding and fixing an issue with cell height
-to TheRealSourceSeeker for finding a bug caused by using floats
-to Drummond Dawson for code changes that allowed removing a dependency
-to styssi for allowing several multipage tables being drawn on the same page
-to Richard Mealing for adding the license section to the pom.xml
-to msww for finding a small issue
-to VakhoQ for implementing border styles
-to Ralf Stuckert for creating pdfbox-layout
-to Miloš Čadek for implementing alignment of vertical text cells
+
 Q&A
 Can I customize the drawers for my own specific needs?
 Yep, you can customize the cell drawers itself or (depending on your use case) you can just create a custom cell.
